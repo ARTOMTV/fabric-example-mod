@@ -10,13 +10,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(HungerManager.class)
 public class HungerManagerMixin {
-    @Shadow private float exhaustion;
+    @Shadow private float foodExhaustion;
 
     @Inject(method = "update", at = @At("HEAD"))
     private void modifyHungerRates(PlayerEntity player, CallbackInfo ci) {
-        // Замедление траты голода в 2 раза
-        if (this.exhaustion > 4.0F) {
-            this.exhaustion -= 2.0F;
+        if (this.foodExhaustion > 4.0F) {
+            this.foodExhaustion -= 2.0F;
         }
     }
 }
