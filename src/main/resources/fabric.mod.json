@@ -1,38 +1,32 @@
 {
-	"schemaVersion": 1,
-	"id": "customhunger",
-	"version": "1.0.0",
-	"name": "Custom Hunger Mod",
-	"description": "Мод для изменения логики голода",
-	"authors": ["Gemini"]
-		"Me!"
-	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "MIT",
-	"icon": "assets/modid/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"com.example.ExampleMod"
-		],
-		"client": [
-			"com.example.client.ExampleModClient"
-		]
-	},
-	"mixins": [
-		"customhunger.mixins.json",
-		{
-			"config": "modid.client.mixins.json",
-			"environment": "client"
-		}
-	],
-	"depends": {
-		"fabricloader": ">=0.14.21",
-		"minecraft": "~1.20.1",
-		"java": ">=17",
-		"fabric-api": "*"
-	}
+  "schemaVersion": 1,
+  "id": "customhunger",
+  "version": "${version}",
+  "name": "Custom Hunger Mod",
+  "description": "Mod to adjust hunger exhaustion",
+  "authors": [
+    "Developer"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/customhunger/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.example.ExampleMod"
+    ],
+    "mixins": [
+      "customhunger.mixins.json"
+    ]
+  },
+  "mixins": [
+    "customhunger.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.22",
+    "minecraft": "~1.20.1",
+    "java": ">=21"
+  }
 }
