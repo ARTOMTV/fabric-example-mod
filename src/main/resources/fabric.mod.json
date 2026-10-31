@@ -1,17 +1,17 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
-	"version": "${version}",
-	"name": "Example Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
-	"authors": [
+	"id": "customhunger",
+	"version": "1.0.0",
+	"name": "Custom Hunger Mod",
+	"description": "Мод для изменения логики голода",
+	"authors": ["Gemini"]
 		"Me!"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/modid/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -23,16 +23,16 @@
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
+		"customhunger.mixins.json",
 		{
 			"config": "modid.client.mixins.json",
 			"environment": "client"
 		}
 	],
 	"depends": {
-		"fabricloader": ">=0.20.1",
-		"minecraft": "~26.3",
-		"java": ">=25",
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
 		"fabric-api": "*"
 	}
 }
